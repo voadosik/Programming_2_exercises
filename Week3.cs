@@ -242,15 +242,46 @@ internal class Week3
       tree.size = array.Length;
       return tree;
     }
-
-
-    
-  
   }
+
+  class Set // 6
+  {
+    private int size;
+    List<long> list;
+    public Set()
+    {
+      list = new List<long>();
+      size = 0;
+    }
+  
+    public int count{ get { return size; } }
+  
+    public bool contains(long l)
+    {
+      for(int i = 0; i < size;  i++) 
+      {
+        if (list[i] == l)
+        {
+          return true;
+        }
+      }
+      return false;
+    }
+  
+    void add(long l)
+    {
+      if(!contains(l))
+      {
+        list.Add(l);
+      }
+    }
+  }
+    
+}
 
 
  
   
 
-}
+
 
